@@ -214,6 +214,13 @@ body.dark-mode p.dark-mode-text {
 body.light-mode p.light-mode-text {
   color: #000;
 }
+body.dark-mode .nav-item .nav-link.active.show {
+  background-color: #000; 
+}
+
+body.light-mode .nav-item .nav-link.active.show {
+  background-color: #fff; 
+}
 
 
 :root {
