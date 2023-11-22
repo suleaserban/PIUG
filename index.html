@@ -349,37 +349,39 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+            <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
               <div class="row gy-4">
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nume" pattern=".{4,}" title="Introduceți minim 4 caractere" required>
-                  <div class="validate"></div>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nume" pattern="^[A-Za-z]+$" title="Introduceți un nume valid. Doar litere sunt permise." required>
+
+                    <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email-ul tau" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" title="Introduceți un email valid" required>
-                  <div class="validate"></div>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email-ul" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" title="Introduceți un email valid" required>
+                    <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Numar telefon" pattern=".{4,}" title="Introduceți minim 4 caractere" required>
-                  <div class="validate"></div>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Numar telefon" pattern="^(\+4)?07[0-9]{8}$" title="Introduceți un număr de telefon valid din România, opțional cu '+4' la început." required>
+                    <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" name="date" class="form-control" id="date" placeholder="Data" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" title="Introduceți o dată validă (DD/MM/YYYY)" required>
-                  <div class="validate"></div>
+                    <input type="text" name="date" class="form-control" id="date" placeholder="Data" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}$" title="Introduceți o dată în formatul DD/MM/YYYY." required>
+                    <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="time" id="time" placeholder="Cand ? " pattern=".{4,}" title="Introduceți minim 4 caractere" required>
-                  <div class="validate"></div>
+                    <input type="text" class="form-control" name="time" id="time" placeholder="Ora" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$" title="Introduceți o oră validă în formatul HH:MM." required>
+                    <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="Nr. de persoane" pattern="[0-9]+" title="Introduceți minim 1 caracter" required>
-                  <div class="validate"></div>
+                    <input type="number" class="form-control" name="people" id="people" placeholder="Nr. de persoane" pattern="^[1-9][0-9]*$" title="Introduceți un număr valid de persoane." required>
+                    <div class="validate"></div>
                 </div>
-              </div>
-              <div class="form-group mt-3">
+            </div>
+            <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Mesaj aditional"></textarea>
                 <div class="validate"></div>
-              </div>
+            </div>
+            
               <div class="mb-3">
                 <div class="loading">Se incarca..</div>
                 <div class="error-message"></div>
